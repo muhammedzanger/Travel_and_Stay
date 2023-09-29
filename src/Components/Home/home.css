@@ -1,0 +1,154 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --hoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 100%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDem: hsl(0, 0%, 93%);
+  --grayBg: hsl(0, 0%, 96%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12, 37%);
+}
+
+.home {
+  height: 80vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url("../../Assets/pexels-photo-1612351.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.home .secContainer .homeText {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.home .secContainer .homeText .title {
+  color: var(--whiteColor);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.home .secContainer .homeText .subtitle {
+  color: var(--whiteColor);
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 300;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.home .secContainer .homeText .btn {
+  padding: 0.6rem 1.5rem;
+}
+.home .secContainer .homeCart {
+  width: 80%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: var(--whiteColor);
+  position: absolute;
+  gap: 1rem;
+  justify-content: center;
+  bottom: -35%;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+}
+.home .secContainer .homeCart .locationDiv,
+.home .secContainer .homeCart .priceDiv,
+.home .secContainer .homeCart .distDiv {
+  width: 100%;
+}
+.home .secContainer .homeCart .locationDiv label,
+.home .secContainer .homeCart .priceDiv label,
+.home .secContainer .homeCart .distDiv label {
+  display: block;
+  color: var(--textColor);
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 0.4rem;
+}
+.home .secContainer .homeCart .locationDiv input,
+.home .secContainer .homeCart .priceDiv input,
+.home .secContainer .homeCart .distDiv input {
+  width: 100%;
+  background: var(--grayBg);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.home .secContainer .homeCart .locationDiv input::-moz-placeholder, .home .secContainer .homeCart .priceDiv input::-moz-placeholder, .home .secContainer .homeCart .distDiv input::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.home .secContainer .homeCart .locationDiv input::placeholder,
+.home .secContainer .homeCart .priceDiv input::placeholder,
+.home .secContainer .homeCart .distDiv input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.home .secContainer .homeCart .locationDiv input:focus,
+.home .secContainer .homeCart .priceDiv input:focus,
+.home .secContainer .homeCart .distDiv input:focus {
+  outline: none;
+}
+.home .secContainer .homeCart .btn {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .home .secContainer .homeCart {
+    bottom: -100px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .secContainer .homeCart .btn {
+    transform: translateY(15px);
+  }
+}
+@media (min-width: 556px) {
+  .home .secContainer .homeText .title {
+    font-size: 2.5rem;
+  }
+  .home .secContainer .homeText .subtitle {
+    font-size: 18px;
+  }
+}
+@media (min-width: 720px) {
+  .home .secContainer .homeCart {
+    bottom: -10%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 720px) {
+  .home .secContainer .homeText {
+    padding: 1rem 10rem;
+  }
+  .home .secContainer .homeText .title {
+    font-size: 3.5rem;
+    margin: auto;
+    line-height: 4rem;
+  }
+  .home .secContainer .homeText .subtitle {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .home .secContainer .homeText .subtitle {
+    font-size: 20px;
+  }
+  .home .secContainer .homeCart {
+    width: 70%;
+  }
+}/*# sourceMappingURL=home.css.map */

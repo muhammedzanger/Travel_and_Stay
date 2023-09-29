@@ -1,0 +1,111 @@
+:root {
+    --primaryColor: hsl(26, 93%, 50%);
+    --hoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 100%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDem: hsl(0, 0%, 93%);
+    --grayBg: hsl(0, 0%, 96%);
+    --grayText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12, 37%);
+}
+
+.footer {
+    background-color: var(--grayBg);
+    padding: 2rem 0;
+
+    .secContainer {
+        gap: 1.5rem;
+        text-align: center;
+
+        .footerLogo {
+            padding-bottom: .5rem;
+
+            .logo {
+                color: var(--blackColor);
+                font-weight: 500;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                .icon {
+                    font-size: 25px;
+                    color: var(--primaryColor);
+                    margin-right: .5rem;
+                }
+            }
+
+        }
+
+        .social {
+            margin: auto;
+            gap: .5rem;
+            justify-content: center;
+
+            .icon {
+                background-color: var(--primaryColor);
+                font-size: 30px;
+                border-radius: 50%;
+                padding: 8px;
+                color: var(--whiteColor);
+
+                &:hover {
+                    background-color: var(--blackColor);
+                }
+            }
+        }
+
+        .footerLinks {
+            display: grid;
+            row-gap: .2rem;
+
+            .linkTitle {
+                padding-bottom: .5rem;
+                font-weight: 700;
+                color: var(--blackColor);
+            }
+
+            li {
+                &:hover {
+                    transform: translate(10px);
+
+                    a {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+
+            a,
+            .phone,
+            .email {
+                color: var(--textColor);
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (min-width:448px) {
+    .secContainer {
+        grid-template-columns: repeat((2, 1fr));
+        align-items: flex-start;
+        text-align: center;
+
+        .footerLinks {
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width:640px) {
+    .secContainer {
+        grid-template-columns: repeat((4, 1fr));
+    }
+}
+
+@media (min-width:900px) {
+    .secContainer {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,93 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --hoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 100%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDem: hsl(0, 0%, 93%);
+  --grayBg: hsl(0, 0%, 96%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12, 37%);
+}
+
+.footer {
+  background-color: var(--grayBg);
+  padding: 2rem 0;
+}
+.footer .secContainer {
+  gap: 1.5rem;
+  text-align: center;
+}
+.footer .secContainer .footerLogo {
+  padding-bottom: 0.5rem;
+}
+.footer .secContainer .footerLogo .logo {
+  color: var(--blackColor);
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer .secContainer .footerLogo .logo .icon {
+  font-size: 25px;
+  color: var(--primaryColor);
+  margin-right: 0.5rem;
+}
+.footer .secContainer .social {
+  margin: auto;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.footer .secContainer .social .icon {
+  background-color: var(--primaryColor);
+  font-size: 30px;
+  border-radius: 50%;
+  padding: 8px;
+  color: var(--whiteColor);
+}
+.footer .secContainer .social .icon:hover {
+  background-color: var(--blackColor);
+}
+.footer .secContainer .footerLinks {
+  display: grid;
+  row-gap: 0.2rem;
+}
+.footer .secContainer .footerLinks .linkTitle {
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--blackColor);
+}
+.footer .secContainer .footerLinks li:hover {
+  transform: translate(10px);
+}
+.footer .secContainer .footerLinks li:hover a {
+  color: var(--primaryColor);
+}
+.footer .secContainer .footerLinks a,
+.footer .secContainer .footerLinks .phone,
+.footer .secContainer .footerLinks .email {
+  color: var(--textColor);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (min-width: 448px) {
+  .secContainer {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    text-align: center;
+  }
+  .secContainer .footerLinks {
+    justify-content: center;
+  }
+}
+@media (min-width: 640px) {
+  .secContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .secContainer {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=footer.css.map */
